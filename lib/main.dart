@@ -392,10 +392,30 @@ class _myAppState extends State<myApp> {
     print('loop i done');
     print(value);
     print(newMatrix);
+
+    if (startStop) {
+      setState(() {
+        startStop = false;
+        watch.start();
+        timer = Timer.periodic(const Duration(milliseconds: 100), (timer) {
+          if (watch.isRunning) {
+            setState(() {
+              print("startstop Inside=$startStop");
+              value = newMatrix;
+            });
+          }
+        });
+      });
+    } else {
+      setState(() {
+        startStop = true;
+        watch.stop();
+      });
+    }
     // setState(() {
     //   value = newMatrix;
     // });
-    startOrStop(newMatrix);
+    // startOrStop(newMatrix);
   }
 
   int conwaysRule(var cell, List neighbours) {
