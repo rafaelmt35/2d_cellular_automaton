@@ -23,4 +23,5 @@ Conway's Game of Life
 ### GLIDER
 
 <img src="https://user-images.githubusercontent.com/99629720/223336899-826e27d9-aebc-4770-a80c-204223bf2754.png" width="200" height="400">
+
 [Video](https://drive.google.com/file/d/1fhdDHNNJPGDYFwGhAdIAuf_357SwS0VU/view?usp=share_link)
